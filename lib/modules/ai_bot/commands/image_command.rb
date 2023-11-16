@@ -118,7 +118,6 @@ module DiscourseAi::AiBot::Commands
 
       @custom_raw = <<~RAW
 
-      [grid]
       #{
         uploads
           .map do |item|
@@ -126,7 +125,6 @@ module DiscourseAi::AiBot::Commands
           end
           .join(" ")
       }
-      [/grid]
     RAW
 
       { prompts: uploads.map { |item| item[:prompt] }, seeds: uploads.map { |item| item[:seed] } }
